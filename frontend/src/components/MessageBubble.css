@@ -1,0 +1,50 @@
+/* src/components/MessageBubble.css */
+.message-bubble {
+  max-width: 80%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  line-height: 1.4;
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  background-color: #3498db;
+  color: white;
+  margin-left: auto;
+}
+
+.message-bubble.assistant {
+  align-self: flex-start;
+  background-color: #f1f0f0;
+  color: #333;
+}
+
+.message-bubble.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.message-image {
+  margin-bottom: 0.5rem;
+}
+
+.message-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.message-time {
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.message-bubble.user .message-time {
+  text-align: right;
+}
+
+.message-bubble.assistant .message-time {
+  text-align: left;
+}

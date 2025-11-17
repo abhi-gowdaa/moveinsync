@@ -1,0 +1,45 @@
+/* src/components/ConfirmationButtons.css */
+.confirmation-buttons {
+  padding: 1rem;
+  background-color: #fff3cd;
+  border-top: 1px solid #ffeeba;
+  border-bottom: 1px solid #ffeeba;
+}
+
+.confirmation-buttons p {
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.confirm-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.cancel-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

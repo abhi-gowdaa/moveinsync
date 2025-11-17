@@ -1,0 +1,362 @@
+/* src/pages/ManageRoute.css */
+
+.manage-route {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  position: relative; /* Needed for floating button positioning */
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-history,
+.btn-download,
+.btn-routes {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-history:hover,
+.btn-download:hover,
+.btn-routes:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.btn-routes {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-routes:hover {
+  background-color: #0056b3;
+}
+
+/* Search and Filters */
+.search-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab {
+  padding: 12px 20px;
+  border: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tab:hover {
+  background-color: #e9ecef;
+}
+
+/* Table Container */
+.routes-table-container {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.routes-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.routes-table th,
+.routes-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.routes-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.routes-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.routes-table tr.selected {
+  background-color: #e3f2fd;
+}
+
+.route-row td {
+  vertical-align: middle;
+}
+
+/* Edit icons */
+.edit-icon {
+  margin-left: 5px;
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+}
+
+.edit-icon:hover {
+  color: #007bff;
+}
+
+/* Action menu */
+.action-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.more-icon {
+  cursor: pointer;
+  color: #666;
+  font-size: 20px;
+}
+
+.more-icon:hover {
+  color: #007bff;
+}
+
+/* Loading and No Data */
+.loading-row,
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rows-per-page select {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.page-info {
+  color: #666;
+  font-size: 14px;
+}
+
+.page-navigation {
+  display: flex;
+  gap: 5px;
+}
+
+.page-btn {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.page-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Status classes */
+.status-active {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.status-deactivated {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.status-pending {
+  color: #ffc107;
+  font-weight: 500;
+}
+
+/* Floating Chat Button */
+.floating-chat-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.floating-chat-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .routes-table {
+    font-size: 12px;
+  }
+  
+  .routes-table th,
+  .routes-table td {
+    padding: 8px 10px;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .page-navigation {
+    justify-content: center;
+  }
+  
+  /* Adjust floating button position on mobile */
+  .floating-chat-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

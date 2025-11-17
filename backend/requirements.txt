@@ -1,0 +1,16 @@
+
+fastapi
+uvicorn
+pydantic
+httpx
+ 
+sqlalchemy
+psycopg-binary
+psycopg
+ 
+python-dotenv
+langchain-core
+langgraph
+langchain-google-genai
+langchain
+python-multipart
