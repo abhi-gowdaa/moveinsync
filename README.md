@@ -24,8 +24,8 @@ Movi is an AI-powered assistant for MoveInSync's transport management platform. 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd movi-agent
+   git clone https://github.com/abhi-gowdaa/moveinsync.git
+   cd backend
    ```
 
 2. **Create virtual environment**
